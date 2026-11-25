@@ -1,9 +1,6 @@
 name: Mirror original Babykies media
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/mirror-media.yml'
 permissions:
   contents: write
 jobs:
@@ -20,7 +17,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add public/assets/original public/catalog.js public/index.html
+          git add assets/original catalog.js index.html
           if ! git diff --cached --quiet; then
             git commit -m "Mirror verified Babykies product media"
             git push

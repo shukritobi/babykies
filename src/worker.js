@@ -1,4 +1,4 @@
-import {priceCart} from '../public/catalog.js';
+import {priceCart} from '../catalog.js';
 const json=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store'}});
 const gate='https://gate.chip-in.asia/api/v1/';
 async function chip(env,path,body){const r=await fetch(gate+path,{method:body?'POST':'GET',headers:{Authorization:'Bearer '+env.CHIP_SECRET_KEY,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});if(!r.ok)throw Error('CHIP request failed');return r.json()}

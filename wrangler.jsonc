@@ -1,1 +1,23 @@
-{"name":"babykies-store","main":"src/worker.js","compatibility_date":"2026-11-25","assets":{"directory":"./public","binding":"ASSETS","run_worker_first":["/api/*"]},"vars":{"PAYMENTS_ENABLED":"false","CHIP_MODE":"test"},"d1_databases":[{"binding":"DB","database_name":"babykies-orders","database_id":"REPLACE_WITH_D1_DATABASE_ID"}]}
+{
+  "name": "babykies-store",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-25",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "vars": {
+    "PAYMENTS_ENABLED": "false",
+    "CHIP_MODE": "test"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "babykies-orders",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ]
+}
